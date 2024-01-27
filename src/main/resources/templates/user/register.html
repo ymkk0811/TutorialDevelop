@@ -22,6 +22,7 @@
                 th:each="item:${T(com.techacademy.entity.User.Gender).values()}"
                 th:value="${item}" th:text="${item}" th:selected="*{gender}==${item}">
         </select>
+        <span th:errors="*{gender}" class="err"></span>
         <br>
 
 
@@ -32,7 +33,7 @@
 
 
         <label for="email">メールアドレス</label>
-        <input type="text" th:field="*{email}" tfh:errorclass="err">
+        <input type="text" th:field="*{email}" th:errorclass="err">
         <span th:errors="*{email}" class="err"></span>
         <br>
         <br>
